@@ -715,6 +715,69 @@
     }
     .footer-bottom p { font-size: 0.71rem; color: rgba(255,255,255,0.28); }
 
+    /* ─── PRESS ─── */
+    .press { background: var(--white); }
+    .press-inner { max-width: 900px; margin: 0 auto; }
+    .og-card {
+      display: flex;
+      align-items: stretch;
+      text-decoration: none;
+      background: var(--white);
+      border: 1px solid rgba(181,66,108,0.18);
+      overflow: hidden;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .og-card:hover {
+      border-color: var(--berry);
+      box-shadow: 0 4px 28px rgba(181,66,108,0.12);
+    }
+    .og-card-thumb {
+      width: 180px;
+      flex-shrink: 0;
+      background-size: cover;
+      background-position: center top;
+      min-height: 140px;
+    }
+    .og-card-body {
+      padding: 1.35rem 1.6rem;
+      border-left: 3px solid var(--berry);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.3rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .og-domain {
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--berry);
+    }
+    .og-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      font-weight: 500;
+      color: var(--plum);
+      line-height: 1.25;
+    }
+    .og-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .og-meta {
+      font-size: 0.68rem;
+      color: rgba(122,104,120,0.6);
+      letter-spacing: 0.04em;
+      margin-top: 0.15rem;
+    }
+    @media (max-width: 560px) {
+      .og-card { flex-direction: column; }
+      .og-card-thumb { width: 100%; height: 180px; }
+      .og-card-body { border-left: none; border-top: 3px solid var(--berry); }
+    }
+
     /* ─── SCROLL REVEAL ─── */
     .js-loaded .rv {
       opacity: 0;
@@ -779,6 +842,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#press">Press</a></li>
       <li><a href="#approach">Approach</a></li>
       <li><a href="#booking">Book</a></li>
     </ul>
@@ -921,6 +985,25 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section class="press" id="press">
+  <div class="section-inner press-inner">
+    <p class="eyebrow rv">As Seen In</p>
+    <h2 class="section-title rv" style="transition-delay: 0.06s">Press &amp; <em>Recognition</em></h2>
+    <div class="rv" style="transition-delay: 0.12s; margin-top: 2.5rem;">
+      <a href="https://shoutoutatlanta.com/meet-trenese-johnson-wellness-enthusiast/" class="og-card" target="_blank" rel="noopener">
+        <div class="og-card-thumb" style="background-image: url('https://d3ez4in977nymc.cloudfront.net/avatars/c617f517068c29b978bdc2617a2557d4.jpg');"></div>
+        <div class="og-card-body">
+          <span class="og-domain">shoutoutatlanta.com</span>
+          <h3 class="og-title">Meet Trenese Johnson | Wellness Enthusiast</h3>
+          <p class="og-desc">Trenese Johnson shares her journey as a licensed clinical social worker, wellness enthusiast, and founder of TheFemmeSphere — offering insight into her mission to serve as an Emotional Healer in the Atlanta community.</p>
+          <span class="og-meta">Shout Out Atlanta &nbsp;·&nbsp; Feature Interview</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
